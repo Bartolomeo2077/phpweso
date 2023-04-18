@@ -1,25 +1,21 @@
 <?php
 require_once dirname(__FILE__).'/../config.php';
-//ochrona widoku
+require_once _ROOT_PATH.'/smarty/libs/Smarty.class.php';
 include _ROOT_PATH.'/app/security/check.php';
-?>
-<!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
-<head>
-	<meta charset="utf-8" />
-	<title>Chroniona strona</title>
-	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-</head>
-<body>
 
-<div style="width:90%; margin: 2em auto;">
-	<a href="<?php print(_APP_ROOT); ?>/app/calc.php" class="pure-button">Powrót do kalkulatora</a>
-	<a href="<?php print(_APP_ROOT); ?>/app/security/logout.php" class="pure-button pure-button-active">Wyloguj</a>
-</div>
+$smarty = new Smarty();
 
-<div style="width:90%; margin: 2em auto;">
-	<p>To jest inna chroniona strona aplikacji internetowej</p>
-</div>	
+$smarty->assign('app_url',_APP_URL);
+$smarty->assign('root_path',_ROOT_PATH);
+$smarty->assign('page_title','Jako taki Kalkulator ;)');
+$smarty->assign('page_description','Szablonowanie oparte na bibliotece smarty');
+$smarty->assign('page_header','Szablony smarty wykorzystane w kalkulatorze');
 
-</body>
-</html>
+
+$smarty->assign('role',$role);
+if( $role  == 'admin' ) {
+    $smarty->display(_ROOT_PATH.'/app/inna_chroniona.html');
+}
+else {
+    header("Location: "._APP_URL);
+}

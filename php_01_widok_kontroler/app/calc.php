@@ -1,79 +1,91 @@
 <?php
 // KONTROLER strony kalkulatora
 require_once dirname(__FILE__).'/../config.php';
+require_once _ROOT_PATH.'/smarty/libs/Smarty.class.php';
 include _ROOT_PATH.'/app/security/check.php';
 
-function getParams(&$Kwota, &$Miesiace, &$Oprocentowanie) 
+function getParams(&$form) 
 {
-    $Kwota = isset($_REQUEST['Kwota']) ? $_REQUEST['Kwota'] : null;
-    $Miesiace = isset($_REQUEST['Miesiace']) ? $_REQUEST['Miesiace'] : null;
-    $Oprocentowanie = isset($_REQUEST['Oprocentowanie']) ? $_REQUEST['Oprocentowanie'] : null;
+	$form['Kwota'] = isset($_REQUEST['Kwota']) ? $_REQUEST['Kwota'] : null;
+	$form['Miesiace'] = isset($_REQUEST['Miesiace']) ? $_REQUEST['Miesiace'] : null;
+	$form['Oprocentowanie'] = isset($_REQUEST['Oprocentowanie']) ? $_REQUEST['Oprocentowanie'] : null;
 }
 
-function validate(&$Kwota,  &$Miesiace, &$Oprocentowanie, &$messages) 
+function validate(&$form, &$messages)
 {
-    if(!(isset($Kwota) && isset($Miesiace) && isset($Oprocentowanie))) 
+    if(!(isset($form['Kwota']) && isset($form['Miesiace']) && isset($form['Oprocentowanie']))) 
 	{
         return false;
     }
 
-// sprawdzenie, czy potrzebne wartości zostały przekazane
-if ($Kwota == "") 
-{
-	$messages [] = 'Nie podano Kwoty';
-}
-if ($Miesiace == "") 
-{
-	$messages [] = 'Nie podano Miesiecy';
-}
-if ($Oprocentowanie == "") 
-{
-	$messages [] = 'Nie podano Oprocentowania';
-}
-
-if (empty( $messages )) 
-{	
-	if (! is_numeric( $Kwota )) 
+	if($form['Kwota'] == "") 
 	{
-		$messages [] = 'Kwota wartość nie jest liczbą całkowitą';
+		$messages [] = 'Nie podano kwoty';
+	} elseif(!is_numeric($form['Kwota'])) 
+	{
+		$messages [] = 'Podaj Kwotę!';
 	}
-	
-	if (! is_numeric( $Miesiace )) 
+	if($form['Miesiace'] == "") 
 	{
-		$messages [] = 'Miesiace nie jest liczbą całkowitą';
+		$messages [] = 'Nie podano Miesiecy';
+	} elseif(!is_numeric($form['Miesiace'])) 
+	{
+		$messages [] = 'Podaj Miesiące!';
 	}
-	if (! is_numeric( $Oprocentowanie )) 
+	if($form['Oprocentowanie'] == "") 
 	{
-		$messages [] = 'Oprocentowanie nie jest liczbą całkowitą';
-	}	
+		$messages [] = 'Nie podano Oprocentowanie';
+	} elseif(!is_numeric($form['Oprocentowanie'])) 
+	{
+		$messages [] = 'Podaj Oprocentowanie!';
+	}
 
 	if(count($messages) != 0) return false;
-    	else return true;
+	else return true;
 }
-}
-// 3. wykonaj zadanie jeśli wszystko w porządku
-
-if (empty ( $messages )) 
-{ // gdy brak błędów
 	
-	function process(&$Kwota, &$Miesiace, &$Oprocentowanie, &$messages, &$result) 
+	function process(&$form, &$result) 
 {
 	global $role;
-	$Kwota = floatval($Kwota);
-	$Miesiace = intval($Miesiace);
-	$Oprocentowanie = floatval($Oprocentowanie);
+	$form['Kwota'] = floatval($form['Kwota']);
+	$form['Miesiace'] = intval($form['Miesiace']);
+	$form['Oprocentowanie'] = floatval($form['Oprocentowanie']);
+
+	
 	//operacja
-	$result =round (($Kwota * ($Miesiace) * ($Oprocentowanie/100)/12),2);
+
+
+	//$result =round ($form['Kwota']) * ($form['Miesiace']) * ($form['Oprocentowanie']);
+	$result =round (($form['Kwota'] * ($form['Miesiace']) * ($form['Oprocentowanie']/100)/12),2);
+	//$result =round ($form['Kwota'] * ($form['Miesiace']) * ($form['Oprocentowanie']/100),2);
 }
-}
-$Kwota = null;
-$Miesiace = null;
-$Oprocentowanie = null;
+
+$form = null;
+//$Kwota = null;
+//$Miesiace = null;
+//$Oprocentowanie = null;
 $result = null;
 $messages = array();
 
-getParams($Kwota, $Miesiace, $Oprocentowanie);
-if(validate($Kwota, $Miesiace, $Oprocentowanie, $messages)) {
-	process($Kwota, $Miesiace, $Oprocentowanie, $messages, $result);
+getParams($form);
+if(validate($form, $messages)) 
+{
+	process($form, $result);
 }
-include 'calc_view.php';
+$smarty = new Smarty();
+
+$smarty->assign('app_url',_APP_URL);
+$smarty->assign('root_path',_ROOT_PATH);
+$smarty->assign('page_title','Jako taki Kalkulator ;)');
+$smarty->assign('page_description','Szablonowanie oparte na bibliotece smarty');
+$smarty->assign('page_header','Szablony smarty wykorzystane w kalkulatorze');
+
+$smarty->assign('form',$form);
+//$smarty->assign('form',$Kwota);
+//$smarty->assign('form',$Miesiace);
+//$smarty->assign('form',$Oprocentowanie);
+$smarty->assign('role',$role);
+$smarty->assign('result',$result);
+$smarty->assign('messages',$messages);
+
+$smarty->display(_ROOT_PATH.'/app/calc.html');
