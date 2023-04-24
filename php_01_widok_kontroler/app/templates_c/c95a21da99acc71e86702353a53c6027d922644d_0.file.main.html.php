@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-04-18 00:40:12
+/* Smarty version 4.3.0, created on 2023-04-24 20:38:45
   from 'D:\Studia\Semestr IV\Aplikacje Webowe\htdocs\php_01_widok_kontroler\templates\main.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_643dcaccd65e67_45646968',
+  'unifunc' => 'content_6446ccb592de53_90661391',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c95a21da99acc71e86702353a53c6027d922644d' => 
     array (
       0 => 'D:\\Studia\\Semestr IV\\Aplikacje Webowe\\htdocs\\php_01_widok_kontroler\\templates\\main.html',
-      1 => 1681770682,
+      1 => 1682360528,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_643dcaccd65e67_45646968 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6446ccb592de53_90661391 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -37,15 +37,15 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 		<title>Kalkulator odsetek</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
+		<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
 /assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
-assets/css/noscript.css" /></noscript>
+		<noscript><link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
+/assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_123721905643dcaccc5b383_65082592', 'header');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4481910006446ccb5921fc5_86278914', 'header');
 ?>
 
 <nav id="nav">
@@ -62,13 +62,13 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_123721905643dcaccc
     <div id="app_content" class="content">
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1431643468643dcaccd645c1_44539825', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13622253516446ccb592cb46_61362065', 'content');
 ?>
 
 
     </div>
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1686295447643dcaccd656d3_34173563', 'footer');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15154491726446ccb592d562_81413835', 'footer');
 ?>
 
     <div id="footer">
@@ -82,12 +82,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1686295447643dcacc
 </body>
 </html><?php }
 /* {block 'header'} */
-class Block_123721905643dcaccc5b383_65082592 extends Smarty_Internal_Block
+class Block_4481910006446ccb5921fc5_86278914 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'header' => 
   array (
-    0 => 'Block_123721905643dcaccc5b383_65082592',
+    0 => 'Block_4481910006446ccb5921fc5_86278914',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -95,12 +95,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'header'} */
 /* {block 'content'} */
-class Block_1431643468643dcaccd645c1_44539825 extends Smarty_Internal_Block
+class Block_13622253516446ccb592cb46_61362065 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1431643468643dcaccd645c1_44539825',
+    0 => 'Block_13622253516446ccb592cb46_61362065',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -110,12 +110,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'content'} */
 /* {block 'footer'} */
-class Block_1686295447643dcaccd656d3_34173563 extends Smarty_Internal_Block
+class Block_15154491726446ccb592d562_81413835 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'footer' => 
   array (
-    0 => 'Block_1686295447643dcaccd656d3_34173563',
+    0 => 'Block_15154491726446ccb592d562_81413835',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

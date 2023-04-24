@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-04-17 22:23:02
+/* Smarty version 4.3.0, created on 2023-04-24 20:00:45
   from 'D:\Studia\Semestr IV\Aplikacje Webowe\htdocs\php_01_widok_kontroler\app\security\login.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_643daaa6005b80_63407783',
+  'unifunc' => 'content_6446c3cd5af3e2_86816950',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3585bf331af41cb058948ba3b7a5a86ca106c614' => 
     array (
       0 => 'D:\\Studia\\Semestr IV\\Aplikacje Webowe\\htdocs\\php_01_widok_kontroler\\app\\security\\login.html',
-      1 => 1681762855,
+      1 => 1682353537,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_643daaa6005b80_63407783 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6446c3cd5af3e2_86816950 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_377647186643daaa5f34c12_79240853', 'header');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7346789036446c3cd58ae02_68350549', 'header');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1345968978643daaa5f358c8_46672153', 'footer');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11102276076446c3cd58bcd6_91947535', 'footer');
 ?>
 
 		
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1559080570643daaa5f36093_63089818', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5214274036446c3cd58cd63_61912242', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "../../templates/main.html");
 }
 /* {block 'header'} */
-class Block_377647186643daaa5f34c12_79240853 extends Smarty_Internal_Block
+class Block_7346789036446c3cd58ae02_68350549 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'header' => 
   array (
-    0 => 'Block_377647186643daaa5f34c12_79240853',
+    0 => 'Block_7346789036446c3cd58ae02_68350549',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -54,12 +54,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'header'} */
 /* {block 'footer'} */
-class Block_1345968978643daaa5f358c8_46672153 extends Smarty_Internal_Block
+class Block_11102276076446c3cd58bcd6_91947535 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'footer' => 
   array (
-    0 => 'Block_1345968978643daaa5f358c8_46672153',
+    0 => 'Block_11102276076446c3cd58bcd6_91947535',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -67,12 +67,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'footer'} */
 /* {block 'content'} */
-class Block_1559080570643daaa5f36093_63089818 extends Smarty_Internal_Block
+class Block_5214274036446c3cd58cd63_61912242 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1559080570643daaa5f36093_63089818',
+    0 => 'Block_5214274036446c3cd58cd63_61912242',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -89,7 +89,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 			<header>
 				<h2>Logowanko</h2>
 			</header>
-			<form action="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
+			<form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
 /app/calc.php" method="post">
 				<div>
 					<div class="col">
@@ -138,23 +138,23 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 <!-- Scripts -->
 <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
+ src="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
 /assets/js/jquery.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
+ src="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
 /assets/js/browser.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
+ src="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
 /assets/js/breakpoints.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
+ src="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
 /assets/js/util.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
+ src="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
 /assets/js/main.js"><?php echo '</script'; ?>
 >
 
