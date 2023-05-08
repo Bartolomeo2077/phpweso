@@ -1,0 +1,42 @@
+{extends file="main.html"}
+
+{block name=header}{/block}
+
+{block name=footer}{/block}
+
+{block name=content}
+
+
+<!-- Wrapper-->
+<div id="wrapper">
+
+	<!-- Nav -->
+	<nav id="nav">
+		<a href="#" class="icon solid fa-home"><span>Home</span></a>
+		<a href="{$conf->app_url}/" class="icon solid fa-arrow-left"><span>Podstawowa</span></a>
+		<a href="{$conf->action_url}logout" class="icon solid fa-fingerprint"><span>Wyloguj</span></a>
+	</nav>
+
+	<!-- main -->
+	<div id="main">
+
+
+		<!-- Marcin to nie fajny kolega -->
+		<article id="home" class="panel intro">
+			<header>
+				<h1>Kalkulator odsetek kredytu</h1>
+				<p>Bartlomiej Niemiec</p>
+				<p>Strona chroniona</p>
+				<p>Zalogowano jako: {$user->role}</p>
+				
+			</header>
+			<a href="https://github.com/Bartolomeo2077" class="jumplink pic">
+				<img src="{$conf->app_url}/assets/images/me.jpg" alt="" />
+			</a>
+		</article>
+
+		{include file='scripts.html'}
+	</div>
+</div>
+
+{/block}
