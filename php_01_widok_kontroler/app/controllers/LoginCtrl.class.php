@@ -79,16 +79,16 @@ public function action_logout()
 {
     session_destroy();
 
-    getMessages()->addInfo('Wylogowano z systemu');
+    getMessages()->addInfo('Poprawnie wylogowano z systemu');
 
     $this->generateView();		 
 }
 
-public function generateView()
-{
-    
-    getSmarty()->assign('page_title','Strona logowania');
-    getSmarty()->assign('form',$this->form);
-    getSmarty()->display('Login.html');		
-}
+    public function generateView()
+    {
+        
+        getSmarty()->assign('page_title','Strona logowania');
+        getSmarty()->assign('form',$this->form);
+        getSmarty()->display('Login.html');		
+    }
 }

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-06-01 03:44:32
-  from 'D:\Studia\Semestr IV\Aplikacje Webowe\htdocs\php_01_widok_kontroler\app\views\templates\messages.html' */
+/* Smarty version 4.3.0, created on 2023-06-01 03:23:17
+  from 'E:\dev\xampp\htdocs\paw\php_01_widok_kontroler\app\views\templates\messages.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6477f80090c139_46548749',
+  'unifunc' => 'content_6477f30588fb64_85926746',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '7778ff51ef8bb42ab3e7f7d8818fb7c2cbe64fd3' => 
+    'ec6d7cdd789382537feb731881b45d056721d528' => 
     array (
-      0 => 'D:\\Studia\\Semestr IV\\Aplikacje Webowe\\htdocs\\php_01_widok_kontroler\\app\\views\\templates\\messages.html',
+      0 => 'E:\\dev\\xampp\\htdocs\\paw\\php_01_widok_kontroler\\app\\views\\templates\\messages.html',
       1 => 1683496306,
       2 => 'file',
     ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6477f80090c139_46548749 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6477f30588fb64_85926746 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['msgs']->value->isError()) {?>
 <h2>Wystąpiły błędy: </h2>
 <div>

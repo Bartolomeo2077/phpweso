@@ -28,6 +28,8 @@
 			<header>
 				<h1>Kalkulator odsetek</h1>
 				<p>Bartlomiej Niemiec</p>
+				<p>użytkownik: {$user->login}</p>
+				<p>rola: {$user->role}</p>
 			</header>
 			<a href="https://github.com/Bartolomeo2077" class="jumplink pic">
 				<img src="{$conf->app_url}/assets/images/me.jpg" alt="" />
@@ -69,6 +71,31 @@
 						{$res->result}
 					</div>
 				{/if}
+
+
+
+				<table id="tab_people">
+					<thead>
+						<tr>
+							<th>Kwota</th>
+							<th>Miesiace</th>
+							<th>Oprocentowanie</th>
+							<th>Wynik</th>
+						</tr>
+					</thead>
+					<tbody>
+					{foreach $record as $r}
+					{strip}
+						<tr>
+							<td>{$r["Kwota"]}</td>
+							<td>{$r["Miesiace"]}</td>
+							<td>{$r["Oprocentowanie"]}</td>
+							<td>{$r["result"]}</td>
+						</tr>
+					{/strip}
+					{/foreach}
+					</tbody>
+					</table>
 
 			</div>
 		</article>

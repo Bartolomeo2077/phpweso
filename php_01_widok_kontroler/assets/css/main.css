@@ -2189,3 +2189,6 @@ input, select, textarea {
 			}
 
 		}
+		tr {
+			text-align: center;
+		}
