@@ -8,7 +8,9 @@ App::getRouter()->setLoginRoute('loginShow'); // akcja/ścieżka na potrzeby log
 
 Utils::addRoute('Strona',    'StronaCtrl');
 Utils::addRoute('Konto',    'KontoCtrl');
-Utils::addRoute('panel',    'PanelCtrl');
+Utils::addRoute('trailer',    'FilmCtrl');
+Utils::addRoute('panel',    'PanelCtrl', ["admin"]);
+Utils::addRoute('dodajFilm',    'PanelCtrl', ["admin"]);
 Utils::addRoute('wypozycz',    'StronaCtrl', ["użytkownik", "admin"]);
 Utils::addRoute('uzytkownikUsun',    'PanelCtrl');
 Utils::addRoute('Rejestracja',    'RejestracjaCtrl');

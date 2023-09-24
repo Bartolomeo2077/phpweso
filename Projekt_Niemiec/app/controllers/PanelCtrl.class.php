@@ -29,9 +29,45 @@ class PanelCtrl {
         ]);
     }
 
+    public function validate() {
+        $this->form->tytul = ParamUtils::getFromRequest("tytul", true);
+        $this->form->opis = ParamUtils::getFromRequest("opis", true);
+        $this->form->file = ParamUtils::getFromRequest("pic", true);
+        $this->form->trailer = ParamUtils::getFromRequest("trailer", true);
+
+        if (!isset($this->form->tytul))
+            return false;
+
+        if(empty($this->form->tytul)){
+            Utils::addErrorMessage("Podaj tytul");
+        }
+        if(empty($this->form->opis)){
+            Utils::addErrorMessage("Podaj opis");
+        }
+        if(empty($this->form->file)){
+            Utils::addErrorMessage("Dodaj zdjęcie");
+        }
+        if(empty($this->form->trailer)){
+            Utils::addErrorMessage("Dodaj trailer");
+        }
+
+        return !App::getMessages()->isError();
+    }
+
     public function validateEdit() {
         $this->form->id = ParamUtils::getFromCleanURL(1, true, 'Błędne wywołanie aplikacji');
         return !App::getMessages()->isError();
+    }
+
+    public function action_dodajFilm() {
+        $this->validate();
+        App::getDB()->insert("filmy", [
+            "tytul" => $this->form->tytul,
+            "opis" => $this->form->opis,
+            "zdjecie" => $this->form->file,
+            "trailer" => $this->form->trailer,
+        ]);
+        $this->action_panel();
     }
 
     public function action_uzytkownikUsun() {

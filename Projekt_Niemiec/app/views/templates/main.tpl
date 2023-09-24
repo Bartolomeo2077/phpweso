@@ -75,7 +75,6 @@
 <!-- Scripts -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="{rel_url action="js/search.js"}"></script>
-	<script src="{rel_url action="js/pagination.js"}"></script>
 	<script src="{rel_url action="js/jquery.min.js"}"></script>
 	<script src="{rel_url action="js/jquery.scrollex.min.js"}"></script>
 	<script src="{rel_url action="js/jquery.scrolly.min.js"}"></script>

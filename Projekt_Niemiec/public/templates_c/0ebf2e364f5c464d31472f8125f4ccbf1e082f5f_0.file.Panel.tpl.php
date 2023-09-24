@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-09-15 16:05:19
+/* Smarty version 4.3.0, created on 2023-09-24 20:00:49
   from 'F:\wamp64\www\Projekty\Projekt_Bartek\app\views\Panel.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_650480bf065a36_43280097',
+  'unifunc' => 'content_65109571ca9500_91846667',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0ebf2e364f5c464d31472f8125f4ccbf1e082f5f' => 
     array (
       0 => 'F:\\wamp64\\www\\Projekty\\Projekt_Bartek\\app\\views\\Panel.tpl',
-      1 => 1694793914,
+      1 => 1695585648,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_650480bf065a36_43280097 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65109571ca9500_91846667 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_979096478650480bf044577_12017346', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_79636226665109571c89d77_01906573', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block "content"} */
-class Block_979096478650480bf044577_12017346 extends Smarty_Internal_Block
+class Block_79636226665109571c89d77_01906573 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_979096478650480bf044577_12017346',
+    0 => 'Block_79636226665109571c89d77_01906573',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -44,6 +44,33 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
 <!-- Main -->
 	<div id="main">
+
+		<section>
+			<form action="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['rel_url'][0], array( array('action'=>"dodajFilm"),$_smarty_tpl ) );?>
+" method="post">
+				<div class="fields">
+					<div class="field">
+						<label for="tytul">Tytuł</label>
+						<input type="text" name="tytul" id="tytul" />
+					</div>
+					<div class="field">
+						<label for="opis">Opis</label>
+						<input type="text" name="opis" id="text"></input>
+					</div>
+					<div class="field">
+						<label for="trailer">Trailer</label>
+						<input type="text" name="trailer" id="trailer"></input>
+					</div>
+					<div class="field">
+						<label for="pic">Zdjęcie</label>
+						<input type="file" name="pic" id="file"></input>
+					</div>
+				</div>
+				<ul class="actions">
+					<li><input type="submit" value="Dodaj film" /></li>
+				</ul>
+			</form>
+		</section>
 		<table id="tab_people" class="pure-table pure-table-bordered">
 		<thead>
 			<tr>

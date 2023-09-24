@@ -8,4 +8,8 @@ class Form {
 	public $email;
 	public $haslo;
 	public $rola;
+	public $tytul;
+	public $opis;
+	public $file;
+	public $trailer;
 }

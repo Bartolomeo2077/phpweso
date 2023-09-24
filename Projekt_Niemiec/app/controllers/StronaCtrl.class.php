@@ -18,10 +18,17 @@ class StronaCtrl {
     private $dataZwrotu;
     private $filmy;
     private $uzytkownik;
+    private $ilosc;
 
     public function __construct() {
         $this->form = new Form();
         $this->str = new StronaForm();
+    }
+
+    public function ilosc() {
+        $this->ilosc = App::getDB()->get("filmy", [
+            "tytul"
+        ]);
     }
 
     public function validate() {
@@ -41,6 +48,7 @@ class StronaCtrl {
         $ilosc = App::getDB()->count("wypozyczenie", [
             "uzytkownikID" => $this->uzytkownik->id,
             "filmID" => $this->form->id,
+            "expired" => 0,
         ]);
         if($ilosc<1){
             App::getDB()->insert("wypozyczenie", [
@@ -101,8 +109,10 @@ class StronaCtrl {
     public function action_Strona() {
         $this->data();
         $this->PokazFilmy();
+        $this->ilosc();
         App::getSmarty()->assign('uzytkownik',SessionUtils::loadObject('uzytkownik', true));
         App::getSmarty()->assign('data', $this->data);
+        App::getSmarty()->assign('ilosc', $this->ilosc);
         App::getSmarty()->assign('filmy', $this->filmy);
         App::getSmarty()->assign('str', $this->str);
         App::getSmarty()->display('Strona.tpl');

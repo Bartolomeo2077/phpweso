@@ -19,7 +19,7 @@
 						<header>
 							<h2><a>{$f["tytul"]}</a></h2>
 						</header>
-						<a class="image fit"><img src="{rel_url src="filmy/pic{$f["zdjecie"]}.jpg"}" alt="" /></a>
+							<a class="image fit"><img src="{rel_url src="filmy/{$f["zdjecie"]}"}" alt="" /></a>
 						<p>{$f["opis"]}</p>
 						<ul class="actions special">
 						<form action="{rel_url action="wypozycz" id=$f['id']}" method="post">
@@ -36,7 +36,7 @@
 						<form action="{rel_url action="Strona" id=$e}" method="post">
 							<input type="submit" name="submit" class="button" value="{$e}" />
 						</form>
-					{{/foreach}}
+					{/foreach}
 				</div>
 			</div>
 	</div>

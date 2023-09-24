@@ -22,14 +22,29 @@ class KontoCtrl {
     public function filmy() {
         $uzytkownik = SessionUtils::loadObject("uzytkownik", true);
         $this->film = App::getDB()->query("
-            SELECT wypozyczenie.id, wypozyczenie.uzytkownikID, filmy.tytul, filmy.opis, filmy.zdjecie, wypozyczenie.wypozyczony, wypozyczenie.zwrot
+            SELECT wypozyczenie.id, wypozyczenie.uzytkownikID, filmy.id, filmy.tytul, filmy.opis, filmy.zdjecie, wypozyczenie.wypozyczony, wypozyczenie.zwrot, wypozyczenie.expired
             FROM wypozyczenie
             INNER JOIN filmy ON wypozyczenie.filmID = filmy.id
             WHERE uzytkownikID = $uzytkownik->id
-            ORDER BY zwrot ASC
+            ORDER BY expired ASC, zwrot ASC
         ")->fetchAll();
-
+        
         return !app::getMessages()->isError();
+    }
+
+    public function update() {
+        $this->filmy();
+        $data = date("Y-m-d");
+        foreach($this->film as $result) {
+            if($result['zwrot'] < $data) {
+                App::getDB()->update("wypozyczenie", [
+                    "expired" => 1,
+                ], [
+                    "id" => $result['id'],
+                ]);
+            }
+        }
+        $this->filmy();
     }
 
     public function ilosc() {
@@ -40,7 +55,7 @@ class KontoCtrl {
     }
 
     public function action_Konto() {
-        $this->filmy();
+        $this->update();
         $this->ilosc();
         App::getSmarty()->assign('uzytkownik',SessionUtils::loadObject('uzytkownik', true));
         App::getSmarty()->assign('film', $this->film);

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('#szukaj').keyup(function() {
+	$('#searchInput').keyup(function() {
 		var searchText = $(this).val().toLowerCase();
 
 		$.ajax({

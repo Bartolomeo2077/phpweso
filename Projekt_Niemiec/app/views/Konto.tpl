@@ -22,11 +22,14 @@
 						<header>
 							<h2><a>{$f["tytul"]}</a></h2>
 						</header>
-						<a class="image fit"><img src="filmy/pic{$f["zdjecie"]}.jpg" alt="" /></a>
+						<form method="get">
+							<a class="image fit" type="submit" {if $f["expired"] == 0}href="{rel_url action="trailer" id=$f["id"]}"{/if}><img src="{rel_url src="filmy/{$f["zdjecie"]}"}" alt="" /></a>
+						</form>
 						<p>{$f["opis"]}</p>
 						<ul class="data" >
 							<li><p>Wypożyczony od {date("d/m/Y", strtotime($f["wypozyczony"]))}</p></li>
 							<li><p><br>Wypożyczony do {date("d/m/Y", strtotime($f["zwrot"]))}</p></li>
+							{if $f["expired"] == 1}<li><p><br>EXPIRED</p></li>{/if}
 						</ul>
 					</article>
 				{/strip}
