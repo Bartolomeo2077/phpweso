@@ -25,7 +25,7 @@ class FilmCtrl {
             "zdjecie",
             "trailer"
         ], [
-            "id" => $this->id,
+            "filmID" => $this->id,
         ]);
         $this->generateView();
     }
@@ -34,12 +34,5 @@ class FilmCtrl {
         App::getSmarty()->assign('uzytkownik',SessionUtils::loadObject('uzytkownik', true));
         App::getSmarty()->assign('trailer', $this->trailer);
         App::getSmarty()->display('Film.tpl');
-    }
-    public function log($data) {
-        $output = $data;
-        if (is_array($output))
-        $output = implode(',', $output);
-
-        echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
     }
 }

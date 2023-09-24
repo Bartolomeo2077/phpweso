@@ -23,7 +23,7 @@
 							<h2><a>{$f["tytul"]}</a></h2>
 						</header>
 						<form method="get">
-							<a class="image fit" type="submit" {if $f["expired"] == 0}href="{rel_url action="trailer" id=$f["id"]}"{/if}><img src="{rel_url src="filmy/{$f["zdjecie"]}"}" alt="" /></a>
+							<a class="image fit" type="submit" {if $f["expired"] == 0}href="{rel_url action="trailer" id=$f["filmID"]}"{/if}><img src="{rel_url src="filmy/{$f["zdjecie"]}"}" alt="" /></a>
 						</form>
 						<p>{$f["opis"]}</p>
 						<ul class="data" >

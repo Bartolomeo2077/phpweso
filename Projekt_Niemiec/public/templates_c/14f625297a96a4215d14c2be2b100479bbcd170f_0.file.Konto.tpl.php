@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-09-24 23:14:10
-  from 'F:\wamp64\www\Projekty\Projekt_Bartek\app\views\Konto.tpl' */
+/* Smarty version 4.3.0, created on 2023-09-25 01:29:56
+  from 'D:\Studia\Semestr IV\Aplikacje Webowe\htdocs\Projekt_Niemiec\app\views\Konto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6510c2c2ac3964_15380182',
+  'unifunc' => 'content_6510c67478d1e2_86779474',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '92fe56b242400f53614a7a604d5704b41535f92c' => 
+    '14f625297a96a4215d14c2be2b100479bbcd170f' => 
     array (
-      0 => 'F:\\wamp64\\www\\Projekty\\Projekt_Bartek\\app\\views\\Konto.tpl',
-      1 => 1695597211,
+      0 => 'D:\\Studia\\Semestr IV\\Aplikacje Webowe\\htdocs\\Projekt_Niemiec\\app\\views\\Konto.tpl',
+      1 => 1695597707,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6510c2c2ac3964_15380182 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6510c67478d1e2_86779474 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1725984036510c2c2a98c08_79339957', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7421656536510c67476c558_11799191', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block "content"} */
-class Block_1725984036510c2c2a98c08_79339957 extends Smarty_Internal_Block
+class Block_7421656536510c67476c558_11799191 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1725984036510c2c2a98c08_79339957',
+    0 => 'Block_7421656536510c67476c558_11799191',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

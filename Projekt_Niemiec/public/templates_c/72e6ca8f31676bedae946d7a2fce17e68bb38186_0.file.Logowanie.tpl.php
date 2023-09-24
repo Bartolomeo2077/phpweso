@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-09-24 17:20:41
-  from 'F:\wamp64\www\Projekty\Projekt_Bartek\app\views\Rejestracja.tpl' */
+/* Smarty version 4.3.0, created on 2023-09-25 01:35:33
+  from 'D:\Studia\Semestr IV\Aplikacje Webowe\htdocs\Projekt_Niemiec\app\views\Logowanie.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_65106fe921ecd7_20891544',
+  'unifunc' => 'content_6510c7c5dc0868_49640854',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'b353d99221ad6f19bffdc68d2a9c3cfd5f791e5d' => 
+    '72e6ca8f31676bedae946d7a2fce17e68bb38186' => 
     array (
-      0 => 'F:\\wamp64\\www\\Projekty\\Projekt_Bartek\\app\\views\\Rejestracja.tpl',
-      1 => 1695575337,
+      0 => 'D:\\Studia\\Semestr IV\\Aplikacje Webowe\\htdocs\\Projekt_Niemiec\\app\\views\\Logowanie.tpl',
+      1 => 1695597707,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65106fe921ecd7_20891544 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6510c7c5dc0868_49640854 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_25189624665106fe921b033_22137694', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16067493236510c7c5dbbca9_31449559', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block "content"} */
-class Block_25189624665106fe921b033_22137694 extends Smarty_Internal_Block
+class Block_16067493236510c7c5dbbca9_31449559 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_25189624665106fe921b033_22137694',
+    0 => 'Block_16067493236510c7c5dbbca9_31449559',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -47,13 +47,13 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 		<!-- Featured Post -->
 			<article class="post featured">
 				<header id="formularz" class="major">
-					<h2><a href="#">Rejestracja</a></h2>
+					<h2><a href="#">Logowanie</a></h2>
 				</header>
 			</article>
 
 	<div>
 		<section>
-			<form action="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['rel_url'][0], array( array('action'=>"RejestracjaKonta"),$_smarty_tpl ) );?>
+			<form action="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['rel_url'][0], array( array('action'=>"Logowanie"),$_smarty_tpl ) );?>
 " method="post">
 				<div class="fields">
 					<div class="field">
@@ -61,16 +61,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 						<input type="text" name="nazwa" id="name" />
 					</div>
 					<div class="field">
-						<label for="email">Email</label>
-						<input type="email" name="email" id="email" />
-					</div>
-					<div class="field">
 						<label for="haslo">Hasło</label>
 						<input type="password" name="haslo" id="message"></input>
 					</div>
 				</div>
 				<ul class="actions">
-					<li><input type="submit" value="Załóż konto" /></li>
+					<li><input type="submit" value="Zaloguj" /></li>
 				</ul>
 			</form>
 		</section>

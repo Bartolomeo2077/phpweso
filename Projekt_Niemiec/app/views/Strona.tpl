@@ -22,7 +22,7 @@
 							<a class="image fit"><img src="{rel_url src="filmy/{$f["zdjecie"]}"}" alt="" /></a>
 						<p>{$f["opis"]}</p>
 						<ul class="actions special">
-						<form action="{rel_url action="wypozycz" id=$f['id']}" method="post">
+						<form action="{rel_url action="wypozycz" id=$f['filmID']}" method="post">
 							<input type="submit" name="submit" class="button" value="Wypożycz" />
 						</form>
 						</ul>

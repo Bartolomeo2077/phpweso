@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-09-24 17:20:18
+/* Smarty version 4.3.0, created on 2023-09-24 22:48:06
   from 'F:\wamp64\www\Projekty\Projekt_Bartek\app\views\Logowanie.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_65106fd2cfdac7_12718313',
+  'unifunc' => 'content_6510bca666f702_42666168',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65106fd2cfdac7_12718313 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6510bca666f702_42666168 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_132371114765106fd2cf9323_89052499', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14349141436510bca666b7d0_28747370', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block "content"} */
-class Block_132371114765106fd2cf9323_89052499 extends Smarty_Internal_Block
+class Block_14349141436510bca666b7d0_28747370 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_132371114765106fd2cf9323_89052499',
+    0 => 'Block_14349141436510bca666b7d0_28747370',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

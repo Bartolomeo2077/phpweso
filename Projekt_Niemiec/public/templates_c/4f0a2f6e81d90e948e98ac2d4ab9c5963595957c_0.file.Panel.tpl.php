@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-09-24 20:00:49
-  from 'F:\wamp64\www\Projekty\Projekt_Bartek\app\views\Panel.tpl' */
+/* Smarty version 4.3.0, created on 2023-09-25 01:35:43
+  from 'D:\Studia\Semestr IV\Aplikacje Webowe\htdocs\Projekt_Niemiec\app\views\Panel.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_65109571ca9500_91846667',
+  'unifunc' => 'content_6510c7cf5d4c61_73323076',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '0ebf2e364f5c464d31472f8125f4ccbf1e082f5f' => 
+    '4f0a2f6e81d90e948e98ac2d4ab9c5963595957c' => 
     array (
-      0 => 'F:\\wamp64\\www\\Projekty\\Projekt_Bartek\\app\\views\\Panel.tpl',
-      1 => 1695585648,
+      0 => 'D:\\Studia\\Semestr IV\\Aplikacje Webowe\\htdocs\\Projekt_Niemiec\\app\\views\\Panel.tpl',
+      1 => 1695597707,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65109571ca9500_91846667 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6510c7cf5d4c61_73323076 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_79636226665109571c89d77_01906573', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21466502086510c7cf5b6676_31348005', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block "content"} */
-class Block_79636226665109571c89d77_01906573 extends Smarty_Internal_Block
+class Block_21466502086510c7cf5b6676_31348005 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_79636226665109571c89d77_01906573',
+    0 => 'Block_21466502086510c7cf5b6676_31348005',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

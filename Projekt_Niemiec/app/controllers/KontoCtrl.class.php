@@ -22,9 +22,9 @@ class KontoCtrl {
     public function filmy() {
         $uzytkownik = SessionUtils::loadObject("uzytkownik", true);
         $this->film = App::getDB()->query("
-            SELECT wypozyczenie.id, wypozyczenie.uzytkownikID, filmy.id, filmy.tytul, filmy.opis, filmy.zdjecie, wypozyczenie.wypozyczony, wypozyczenie.zwrot, wypozyczenie.expired
+            SELECT wypozyczenie.id, wypozyczenie.uzytkownikID, filmy.filmID, filmy.tytul, filmy.opis, filmy.zdjecie, wypozyczenie.wypozyczony, wypozyczenie.zwrot, wypozyczenie.expired
             FROM wypozyczenie
-            INNER JOIN filmy ON wypozyczenie.filmID = filmy.id
+            INNER JOIN filmy ON wypozyczenie.filmID = filmy.filmID
             WHERE uzytkownikID = $uzytkownik->id
             ORDER BY expired ASC, zwrot ASC
         ")->fetchAll();

@@ -63,7 +63,7 @@ class StronaCtrl {
 
     public function zliczfilmy() {
         $this->str->iloscFilmow = App::getDB()->query("
-            SELECT id, tytul, opis, zdjecie
+            SELECT filmID, tytul, opis, zdjecie
             FROM filmy
         ")->fetchAll();
     }
@@ -100,7 +100,7 @@ class StronaCtrl {
     public function PokazFilmy() {
         $this->ParamStrony();
         $this->filmy = App::getDB()->query("
-            SELECT id, tytul, opis, zdjecie
+            SELECT filmID, tytul, opis, zdjecie
             FROM filmy
             LIMIT ". $this->str->naStronie ." OFFSET ".$this->str->offset
         )->fetchAll();
