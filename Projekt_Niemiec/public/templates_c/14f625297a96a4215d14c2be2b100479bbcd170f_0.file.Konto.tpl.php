@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-09-25 01:29:56
+/* Smarty version 4.3.0, created on 2023-09-25 12:01:38
   from 'D:\Studia\Semestr IV\Aplikacje Webowe\htdocs\Projekt_Niemiec\app\views\Konto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6510c67478d1e2_86779474',
+  'unifunc' => 'content_65115a82683a84_99194244',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '14f625297a96a4215d14c2be2b100479bbcd170f' => 
     array (
       0 => 'D:\\Studia\\Semestr IV\\Aplikacje Webowe\\htdocs\\Projekt_Niemiec\\app\\views\\Konto.tpl',
-      1 => 1695597707,
+      1 => 1695636022,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6510c67478d1e2_86779474 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65115a82683a84_99194244 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7421656536510c67476c558_11799191', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_38521473365115a8265f509_26824968', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block "content"} */
-class Block_7421656536510c67476c558_11799191 extends Smarty_Internal_Block
+class Block_38521473365115a8265f509_26824968 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_7421656536510c67476c558_11799191',
+    0 => 'Block_38521473365115a8265f509_26824968',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -85,6 +85,10 @@ $_smarty_tpl->tpl_vars['f']->do_else = false;
 							<li><p><br>Wypożyczony do <?php echo date("d/m/Y",strtotime($_smarty_tpl->tpl_vars['f']->value["zwrot"]));?>
 </p></li>
 							<?php if ($_smarty_tpl->tpl_vars['f']->value["expired"] == 1) {?><li><p><br>EXPIRED</p></li><?php }?>
+							<form action="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['rel_url'][0], array( array('action'=>"usunKonto",'id'=>$_smarty_tpl->tpl_vars['f']->value['id']),$_smarty_tpl ) );?>
+" method="post">
+								<input type="submit" name="submit" class="button" value="Usuń" />
+							</form>
 						</ul>
 					</article>
 				

@@ -7,6 +7,8 @@ App::getRouter()->setDefaultRoute('StronaView'); // akcja/ścieżka domyślna
 App::getRouter()->setLoginRoute('loginShow'); // akcja/ścieżka na potrzeby logowania (przekierowanie, gdy nie ma dostępu)
 
 Utils::addRoute('Strona',    'StronaCtrl');
+Utils::addRoute('usunStrona',    'StronaCtrl', ["admin"]);
+Utils::addRoute('usunKonto',    'KontoCtrl', ["użytkownik", "admin"]);
 Utils::addRoute('Konto',    'KontoCtrl');
 Utils::addRoute('trailer',    'FilmCtrl');
 Utils::addRoute('panel',    'PanelCtrl', ["admin"]);

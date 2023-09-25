@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-09-25 01:29:33
+/* Smarty version 4.3.0, created on 2023-09-25 12:01:16
   from 'D:\Studia\Semestr IV\Aplikacje Webowe\htdocs\Projekt_Niemiec\app\views\Strona.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6510c65d8b4769_02866861',
+  'unifunc' => 'content_65115a6cd3a191_35879891',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '25ac58cf9eec406da47be10e33490face7ee4496' => 
     array (
       0 => 'D:\\Studia\\Semestr IV\\Aplikacje Webowe\\htdocs\\Projekt_Niemiec\\app\\views\\Strona.tpl',
-      1 => 1695597707,
+      1 => 1695636042,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6510c65d8b4769_02866861 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65115a6cd3a191_35879891 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19925154116510c65d898890_07708166', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_117451914865115a6c8fd8a3_05771196', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block "content"} */
-class Block_19925154116510c65d898890_07708166 extends Smarty_Internal_Block
+class Block_117451914865115a6c8fd8a3_05771196 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_19925154116510c65d898890_07708166',
+    0 => 'Block_117451914865115a6c8fd8a3_05771196',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -76,6 +76,10 @@ $_smarty_tpl->tpl_vars['f']->do_else = false;
 " method="post">
 							<input type="submit" name="submit" class="button" value="Wypożycz" />
 						</form>
+						<?php if ($_smarty_tpl->tpl_vars['uzytkownik']->value->role == "admin") {?><form action="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['rel_url'][0], array( array('action'=>"usunStrona",'id'=>$_smarty_tpl->tpl_vars['f']->value['filmID']),$_smarty_tpl ) );?>
+" method="post">
+							<input type="submit" name="submit" class="button" value="Usuń" />
+						</form><?php }?>
 						</ul>
 					</article>
 				

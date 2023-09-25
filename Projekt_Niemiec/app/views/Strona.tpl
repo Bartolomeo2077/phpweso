@@ -25,6 +25,9 @@
 						<form action="{rel_url action="wypozycz" id=$f['filmID']}" method="post">
 							<input type="submit" name="submit" class="button" value="Wypożycz" />
 						</form>
+						{if $uzytkownik->role == "admin"}<form action="{rel_url action="usunStrona" id=$f['filmID']}" method="post">
+							<input type="submit" name="submit" class="button" value="Usuń" />
+						</form>{/if}
 						</ul>
 					</article>
 				{/strip}

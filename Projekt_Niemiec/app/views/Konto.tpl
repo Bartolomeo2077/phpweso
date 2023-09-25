@@ -30,6 +30,9 @@
 							<li><p>Wypożyczony od {date("d/m/Y", strtotime($f["wypozyczony"]))}</p></li>
 							<li><p><br>Wypożyczony do {date("d/m/Y", strtotime($f["zwrot"]))}</p></li>
 							{if $f["expired"] == 1}<li><p><br>EXPIRED</p></li>{/if}
+							<form action="{rel_url action="usunKonto" id=$f['id']}" method="post">
+								<input type="submit" name="submit" class="button" value="Usuń" />
+							</form>
 						</ul>
 					</article>
 				{/strip}

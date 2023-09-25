@@ -54,6 +54,16 @@ class KontoCtrl {
         ]);
     }
 
+    public function action_usunKonto() {
+        $this->validate();
+        $id = ParamUtils::getFromCleanURL(1, true);
+        App::getDB()->delete("wypozyczenie", [
+            "id" => $id,
+            "uzytkownikID" => $this->uzytkownik->id,
+        ]);
+        App::getRouter()->redirectTo("Konto");
+    }
+
     public function action_Konto() {
         $this->update();
         $this->ilosc();

@@ -106,6 +106,14 @@ class StronaCtrl {
         )->fetchAll();
     }
 
+    public function action_usunStrona() {
+        $id = ParamUtils::getFromCleanURL(1, true);
+        App::getDB()->delete("filmy", [
+            "filmID" => $id,
+        ]);
+        App::getRouter()->redirectTo("Strona");
+    }
+
     public function action_Strona() {
         $this->data();
         $this->PokazFilmy();
